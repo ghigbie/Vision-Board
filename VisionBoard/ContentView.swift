@@ -14,21 +14,21 @@ struct ContentView: View{
     var body: some View {
         VStack(spacing: 12){
             HStack(spacing: 12){
-                GridItemView(imageName: "tesla")
-                GridItemView(imageName: "husky")
-                GridItemView(imageName: "pool")
+                ForEach(0 ..< rowOne.count){ item in
+                    GridItemView(imageName: rowOne[item])
+                }
             } //HSTACK
             
             HStack(spacing: 12){
-                GridItemView(imageName: "apple")
-                GridItemView(imageName: "library")
-                GridItemView(imageName: "house")
+                ForEach(0 ..< rowTwo.count){ item in
+                    GridItemView(imageName: rowTwo[item])
+                }
             } //HSTACK
             
             HStack(spacing: 12){
-                GridItemView(imageName: "apartment")
-                GridItemView(imageName: "garden")
-                GridItemView(imageName: "garage")
+                ForEach(0 ..< rowThree.count){ item in
+                    GridItemView(imageName: rowThree[item])
+                }
             } //HSTACK
         }//VSTACK
     }
